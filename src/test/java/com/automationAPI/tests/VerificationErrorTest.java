@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class VerificationErrorTest extends BaseTest {
     @Test
-    public void film7(){
-        verificationFilm.film("/films/7/");
+    public void getStatusCodefilm(){
+        verificationFilmByPath("/films/7/", 404);
     }
 }

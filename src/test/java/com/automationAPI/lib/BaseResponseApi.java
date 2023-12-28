@@ -17,8 +17,8 @@ public class BaseResponseApi {
         return peopleResponse.path(films);
     }
 
-    public String returnPlanet(String planet){
-        Response responsePeople = given().get(returnFilm("films[5]"));
+    public String returnPlanet(String planet, String film){
+        Response responsePeople = given().get(returnFilm(film));
         return responsePeople.path(planet);
     }
 }

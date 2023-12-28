@@ -3,9 +3,9 @@ package com.automationAPI.tests;
 import com.automationAPI.lib.BaseTest;
 import org.testng.annotations.Test;
 
-public class FilmTest extends BaseTest{
+public class FilmValuesTest extends BaseTest{
     @Test
-    public void dateTest(){
+    public void dataTest(){
         dataFilms.dateFormatTest(dataFilms.returnFilm("films[1]"));
         dataFilms.verifyDataInFilm(dataFilms.returnFilm("films[1]"));
     }

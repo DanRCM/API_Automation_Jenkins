@@ -1,4 +1,4 @@
-package com.automationAPI.ApiResponses;
+package com.automationAPI.modelsAPIResponses;
 
 import com.automationAPI.lib.BaseResponseApi;
 import io.restassured.response.Response;
