@@ -8,7 +8,7 @@ import static io.restassured.RestAssured.given;
 
 public class PeopleInformation extends BaseResponseApi{
     public void skin_colorTest(){
-        Response response = given().get(returnPeoplepath());
+        Response response = given().when().get(returnPeoplepath());
         String skinColor = response.path("skin_color");
 
         Assert.assertEquals(response.getStatusCode(),200);
@@ -18,7 +18,7 @@ public class PeopleInformation extends BaseResponseApi{
         System.out.println("Skin color is gold");
     }
     public void filmsTest(){
-        Response response = given().get(returnPeoplepath());
+        Response response = given().when().get(returnPeoplepath());
         int films = response.jsonPath().getList("films").size();
 
         Assert.assertEquals(response.getStatusCode(),200);

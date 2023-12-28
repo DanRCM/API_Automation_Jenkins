@@ -10,7 +10,7 @@ public class PlanetFilms extends BaseResponseApi {
         String expectedGravity = "1 standard";
         String expectedTerrain = "desert";
 
-        Response response = given().get(Urlplanet);
+        Response response = given().when().get(Urlplanet);
 
         Assert.assertEquals(response.getStatusCode(),200);
         System.out.println("Available status code");

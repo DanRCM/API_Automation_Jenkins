@@ -13,12 +13,12 @@ public class BaseResponseApi {
     }
 
     public String returnFilm(String films){
-        Response peopleResponse = given().get(returnPeoplepath());
+        Response peopleResponse = given().when().get(returnPeoplepath());
         return peopleResponse.path(films);
     }
 
     public String returnPlanet(String planet, String film){
-        Response responsePeople = given().get(returnFilm(film));
+        Response responsePeople = given().when().get(returnFilm(film));
         return responsePeople.path(planet);
     }
 }

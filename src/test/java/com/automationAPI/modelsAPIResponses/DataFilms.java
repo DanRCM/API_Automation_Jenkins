@@ -8,7 +8,7 @@ import static io.restassured.RestAssured.given;
 
 public class DataFilms extends BaseResponseApi {
     public void dateFormatTest(String filmUrl) {
-        Response responseFilm = given().get(filmUrl);
+        Response responseFilm = given().when().get(filmUrl);
 
         String expectedDateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS'Z'";
         String releaseDate = responseFilm.path("created");
@@ -24,7 +24,7 @@ public class DataFilms extends BaseResponseApi {
         }
     }
     public void verifyDataInFilm(String filmUrl) {
-        Response responseFilm = given().get(filmUrl);
+        Response responseFilm = given().when().get(filmUrl);
 
         Assert.assertEquals(responseFilm.getStatusCode(), 200, "The request was not successful");
         System.out.println("Available status code");

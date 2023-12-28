@@ -12,7 +12,7 @@ public class BaseTest {
     public PlanetFilms planetFilms = new PlanetFilms();
     //put Url using returnPlanet() and the path for commpare
     public void compareResponse(String UrlPlanet, String path){
-        Response response = given().get(UrlPlanet);
+        Response response = given().when().get(UrlPlanet);
 
         System.out.println("UrlPlanet: " + UrlPlanet);
         System.out.println("Uri: " + response.path(path));
@@ -21,7 +21,7 @@ public class BaseTest {
     }
     /* Example films/number/ */
     public void verificationFilmByPath(String film, int code){
-        Response response = given().get(BaseResponseApi.API_PATH+ film);
+        Response response = given().when().get(BaseResponseApi.API_PATH+ film);
 
         Assert.assertEquals(response.getStatusCode(),code);
         System.out.println("status code " + code);
