@@ -1,15 +1,16 @@
 package com.automationAPI.ApiResponses;
 
+import com.automationAPI.lib.BaseResponseApi;
 import io.restassured.response.Response;
+import org.testng.Assert;
 
 import static io.restassured.RestAssured.given;
 
-public class VerificationFilm extends DataFilmsApi{
-    public VerificationFilm(String people) {
-        super(people);
-    }
-    public void film(){
-        Response response = given().get(returnFilm("films[6]"));
-        System.out.println(response.getStatusCode());
+public class VerificationFilm extends BaseResponseApi {
+    public void film(String film){
+        Response response = given().get(API_PATH+ film);
+
+        Assert.assertEquals(response.getStatusCode(),404);
+        System.out.println("status code " + response.getStatusCode());
     }
 }

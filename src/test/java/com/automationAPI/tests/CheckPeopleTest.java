@@ -1,12 +1,11 @@
 package com.automationAPI.tests;
-import com.automationAPI.ApiResponses.PeopleApi;
+import com.automationAPI.lib.BaseTest;
 import org.testng.annotations.Test;
 
-public class CheckPeopleTest {
-    PeopleApi peopleApi = new PeopleApi("/people/2");
+public class CheckPeopleTest extends BaseTest {
     @Test
     public void skin_and_filmTests(){
-        peopleApi.skin_colorTest();
-        peopleApi.filmsTest();
+        peopleInformation.skin_colorTest();
+        peopleInformation.filmsTest();
     }
 }
