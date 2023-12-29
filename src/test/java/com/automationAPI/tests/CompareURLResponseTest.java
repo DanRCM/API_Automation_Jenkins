@@ -1,7 +1,6 @@
 package com.automationAPI.tests;
 
 import com.automationAPI.lib.BaseTest;
-import com.automationAPI.modelsAPIResponses.DataFilms;
 import org.testng.annotations.Test;
 
 public class CompareURLResponseTest extends BaseTest {
