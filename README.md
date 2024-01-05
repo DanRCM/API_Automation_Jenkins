@@ -3,6 +3,8 @@ This automation practice, implemented in Jenkins, focuses on API testing using t
 
 # About API Automation
 
+## Tests
+
 **CheckPeople2Test**
 
 Description: Evaluates the people/2/ endpoint through the following actions:
