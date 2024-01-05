@@ -3,7 +3,6 @@ pipeline {
 
     parameters {
         string(name: 'url', defaultValue: 'https://swapi.dev/api', description: 'Base URL for testing')
-        string(name: 'suiteName', defaultValue: 'FilmSuite.xml', description: 'Test Suite')
     }
 
     tools {
@@ -26,7 +25,7 @@ pipeline {
         stage('Execute Tests') {
                     steps {
                         script {
-                            sh "mvn test -Durl=${params.url} -DsuiteFile=${params.suiteName}"
+                            sh "mvn test -Durl=${params.url}"
                         }
                     }
                     post {
