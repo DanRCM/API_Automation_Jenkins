@@ -1,5 +1,5 @@
 # API_Automation
-This automation practice, implemented in Jenkins, focuses on API testing using the Star Wars API (swapi). It's important to note that the practice was conducted on a Linux environment. Therefore, instead of using bat for commands (which is common in Windows), the sh command is used to execute shell commands on Linux.
+This automation practice, implemented in Jenkins, focuses on API testing using the Star Wars API (swapi). It's important to note that the practice was conducted on a **Linux environment**. Therefore, instead of using **bat** for commands (which is common in Windows), the **sh** command is used to execute shell commands on Linux.
 
 # About API Automation
 
