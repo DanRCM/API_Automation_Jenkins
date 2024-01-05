@@ -1,0 +1,45 @@
+pipeline {
+    agent any
+
+    parameters {
+        string(name: 'url', defaultValue: 'https://swapi.dev/api', description: 'Base URL for testing')
+        string(name: 'suiteName', defaultValue: 'FilmSuite.xml', description: 'Test Suite')
+    }
+
+    tools {
+        maven "M2"
+    }
+
+    stages {
+        stage('Clone and Fetch') {
+            steps {
+                git branch: 'main', url: 'https://github.com/DanRCM/API_Automation_Jenkins'
+            }
+        }
+
+        stage('Compile Application') {
+            steps {
+                sh "mvn -B -DskipTests clean package"
+            }
+        }
+
+//         stage('Execute Tests') {
+//                     steps {
+//                         script {
+//                             sh "mvn test -Durl=${params.url} -DsuiteFile=${params.suiteName}"
+//                         }
+//                     }
+//                     post {
+//                         always{
+//                             allure([
+//                             includeProperties: false,
+//                             jdk: '',
+//                             properties: [],
+//                             reportBuildPolicy: 'ALWAYS',
+//                             results: [[path: '*/allure-results']]
+//                             ])
+//                         }
+//                     }
+        }
+    }
+}
