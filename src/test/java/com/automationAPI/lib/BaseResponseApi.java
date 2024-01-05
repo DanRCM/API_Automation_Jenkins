@@ -6,7 +6,7 @@ import static io.restassured.RestAssured.given;
 
 public class BaseResponseApi {
     String peoplePath = "/people/2/";
-    public static final String API_PATH = "https://swapi.dev/api";
+    public static final String API_PATH = System.getProperty("url");
 
     public String returnPeoplepath(){
         return API_PATH + peoplePath;
