@@ -3,10 +3,10 @@
     <test name="Mobile Test">
         <classes>
             <class name="com.automationAPI.tests.CheckPeople2Test"></class>
-<!--            <class name="com.automationAPI.tests.FilmValuesTest"></class>-->
-<!--            <class name="com.automationAPI.tests.PlanetValuesTest"></class>-->
-<!--            <class name="com.automationAPI.tests.CompareURLResponseTest"></class>-->
-<!--            <class name="com.automationAPI.tests.VerificationErrorTest"></class>-->
+            <class name="com.automationAPI.tests.FilmValuesTest"></class>
+            <class name="com.automationAPI.tests.PlanetValuesTest"></class>
+            <class name="com.automationAPI.tests.CompareURLResponseTest"></class>
+            <class name="com.automationAPI.tests.VerificationErrorTest"></class>
         </classes>
     </test>
 </suite>
