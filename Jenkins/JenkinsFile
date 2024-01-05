@@ -23,23 +23,23 @@ pipeline {
             }
         }
 
-//         stage('Execute Tests') {
-//                     steps {
-//                         script {
-//                             sh "mvn test -Durl=${params.url} -DsuiteFile=${params.suiteName}"
-//                         }
-//                     }
-//                     post {
-//                         always{
-//                             allure([
-//                             includeProperties: false,
-//                             jdk: '',
-//                             properties: [],
-//                             reportBuildPolicy: 'ALWAYS',
-//                             results: [[path: '*/allure-results']]
-//                             ])
-//                         }
-//                     }
-//         }
+        stage('Execute Tests') {
+                    steps {
+                        script {
+                            sh "mvn test -Durl=${params.url} -DsuiteFile=${params.suiteName}"
+                        }
+                    }
+                    post {
+                        always{
+                            allure([
+                            includeProperties: false,
+                            jdk: '',
+                            properties: [],
+                            reportBuildPolicy: 'ALWAYS',
+                            results: [[path: '*/allure-results']]
+                            ])
+                        }
+                    }
+        }
     }
 }
