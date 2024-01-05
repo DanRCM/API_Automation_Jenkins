@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     parameters {
-        string(name: 'url', defaultValue: 'https://swapi.dev/api', description: 'Base URL for testing')
+        string(name: 'url', defaultValue: 'https://swapi.dev/api', description: 'Base URL')
         string(name: 'suitePath', defaultValue: 'src/test/resources/Suite.xml', description: 'Path Suite')
     }
 
